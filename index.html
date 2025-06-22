@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urban Travellar Outfit</title>
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/892/892458.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      /* Subtle background gradient */
+      background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+    }
+    /* Custom shadow for hero */
+    .hero-shadow {
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+  <!-- Home Anchor for Navigation -->
+  <div id="home"></div>
+  <!-- Header -->
+  <header class="bg-black text-white py-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-2xl font-bold tracking-wide">Urban Travellar Outfit</h1>
+      <nav>
+        <ul class="flex gap-6">
+          <li><a href="#home" class="hover:text-yellow-400 transition-colors duration-200">Home</a></li>
+          <li><a href="#men" class="hover:text-yellow-400 transition-colors duration-200">Men</a></li>
+          <li><a href="#women" class="hover:text-yellow-400 transition-colors duration-200">Women</a></li>
+          <li><a href="#contact" class="hover:text-yellow-400 transition-colors duration-200">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center">
+        <span id="cart-counter" class="ml-6 bg-yellow-400 text-black px-3 py-1 rounded-full font-semibold shadow hidden">Cart: <span id="cart-count">0</span></span>
+        <span id="welcome-user" class="ml-4 font-semibold hidden">
+          Welcome, <span id="user-name"></span>!
+          <button id="logout-btn" class="ml-2 px-2 py-1 bg-gray-200 text-black rounded hover:bg-yellow-400">Logout</button>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-[url('https://source.unsplash.com/1600x600/?fashion,urban')] bg-cover bg-center h-[70vh] flex items-center justify-center text-center">
+    <div class="absolute inset-0 bg-black bg-opacity-60 hero-shadow"></div>
+    <div class="relative z-10 p-8 rounded text-white max-w-xl mx-auto">
+      <h2 class="text-4xl font-extrabold mb-4 drop-shadow-lg">Discover the Urban Style</h2>
+      <p class="mb-6 text-lg">Trendy outfits for men and women, designed for the modern explorer.</p>
+      <a href="#men" class="bg-yellow-400 text-black py-2 px-6 rounded font-semibold shadow hover:bg-yellow-500 transition-colors duration-200">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Shop Sections -->
+  <!-- Men's Collection -->
+<section id="men" class="py-12 px-4">
+  <h3 class="text-3xl font-bold text-center mb-8">Men's Collection</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+    <div class="border rounded shadow p-4 text-center bg-white hover:shadow-2xl transition">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Men's Jacket" class="mb-4 w-full rounded-lg shadow" />
+      <h4 class="font-bold mb-1">Urban Jacket</h4>
+      <p class="mb-2 text-gray-600">20000tzs</p>
+      <button class="bg-black text-white py-1 px-4 rounded hover:bg-yellow-400 hover:text-black transition-colors duration-200">Buy Now</button>
+    </div>
+    <div class="border rounded shadow p-4 text-center bg-white hover:shadow-2xl transition">
+      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="Men's T-Shirt" class="mb-4 w-full rounded-lg shadow" />
+      <h4 class="font-bold mb-1">Graphic Tee</h4>
+      <p class="mb-2 text-gray-600">$29.99</p>
+      <button class="bg-black text-white py-1 px-4 rounded hover:bg-yellow-400 hover:text-black transition-colors duration-200">Buy Now</button>
+    </div>
+    <div class="border rounded shadow p-4 text-center bg-white hover:shadow-2xl transition">
+      <img src="https://images.unsplash.com/photo-1469398715555-76331a6c7c9b?auto=format&fit=crop&w=400&q=80" alt="Men's Hoodie" class="mb-4 w-full rounded-lg shadow" />
+      <h4 class="font-bold mb-1">Classic Hoodie</h4>
+      <p class="mb-2 text-gray-600">$39.99</p>
+      <button class="bg-black text-white py-1 px-4 rounded hover:bg-yellow-400 hover:text-black transition-colors duration-200">Buy Now</button>
+    </div>
+    <div class="border rounded shadow p-4 text-center bg-white hover:shadow-2xl transition">
+      <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Men's Sweater" class="mb-4 w-full rounded-lg shadow" />
+      <h4 class="font-bold mb-1">Winter Sweater</h4>
+      <p class="mb-2 text-gray-600">$44.99</p>
+      <button class="bg-black text-white py-1 px-4 rounded hover:bg-yellow-400 hover:text-black transition-colors duration-200">Buy Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- Women's Collection -->
+<section id="women" class="py-12 px-4 bg-gray-100">
+  <h3 class="text-3xl font-bold text-center mb-8">Women's Collection</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+    <div class="border rounded shadow p-4 text-center bg-white hover:shadow-2xl transition">
+    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Woman in a light casual dress standing on a city street, smiling gently with relaxed posture, surrounded by urban buildings and soft daylight, conveying a calm and approachable mood" class="mb-4 w-full rounded-lg shadow" />
+      <h4 class="font-bold mb-1">Casual Dress</h4>
+      <p class="mb-2 text-gray-600">$49.99</p>
+      <button class="bg-black text-white py-1 px-4 rounded hover:bg-yellow-400 hover:text-black transition-colors duration-200">Buy Now</button>
+    </div>
+    <div class="border rounded shadow p-4 text-center bg-white hover:shadow-2xl transition">
+      <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Women's Jacket" class="mb-4 w-full rounded-lg shadow" />
+      <h4 class="font-bold mb-1">Denim Jacket</h4>
+      <p class="mb-2 text-gray-600">$64.99</p>
+      <button class="bg-black text-white py-1 px-4 rounded hover:bg-yellow-400 hover:text-black transition-colors duration-200">Buy Now</button>
+    </div>
+    <div class="border rounded shadow p-4 text-center bg-white hover:shadow-2xl transition">
+      <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Women's Blouse" class="mb-4 w-full rounded-lg shadow" />
+      <h4 class="font-bold mb-1">Summer Blouse</h4>
+      <p class="mb-2 text-gray-600">$39.99</p>
+      <button class="bg-black text-white py-1 px-4 rounded hover:bg-yellow-400 hover:text-black transition-colors duration-200">Buy Now</button>
+    </div>
+    <div class="border rounded shadow p-4 text-center bg-white hover:shadow-2xl transition">
+      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="Women's Skirt" class="mb-4 w-full rounded-lg shadow" />
+      <h4 class="font-bold mb-1">Pleated Skirt</h4>
+      <p class="mb-2 text-gray-600">$29.99</p>
+      <button class="bg-black text-white py-1 px-4 rounded hover:bg-yellow-400 hover:text-black transition-colors duration-200">Buy Now</button>
+    </div>
+  </div>
+</section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-12 px-4 bg-white">
+    <h3 class="text-3xl font-bold text-center mb-8">Our Services</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="bg-gray-100 rounded-lg shadow p-6 text-center hover:shadow-xl transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png" alt="Free Shipping" class="w-16 h-16 mx-auto mb-4">
+        <h4 class="font-bold mb-2">Free Shipping</h4>
+        <p class="text-gray-600">Enjoy free shipping on all orders above $50, delivered right to your doorstep.</p>
+      </div>
+      <div class="bg-gray-100 rounded-lg shadow p-6 text-center hover:shadow-xl transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Easy Returns" class="w-16 h-16 mx-auto mb-4">
+        <h4 class="font-bold mb-2">Easy Returns</h4>
+        <p class="text-gray-600">Not satisfied? Return your items within 14 days for a full refund or exchange.</p>
+      </div>
+      <div class="bg-gray-100 rounded-lg shadow p-6 text-center hover:shadow-xl transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="24/7 Support" class="w-16 h-16 mx-auto mb-4">
+        <h4 class="font-bold mb-2">24/7 Support</h4>
+        <p class="text-gray-600">Our customer support team is available around the clock to assist you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-12 px-4 bg-gray-50">
+    <h3 class="text-3xl font-bold text-center mb-8">Customer Reviews</h3>
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-lg shadow p-6">
+        <p class="italic mb-4">"Great quality clothes and super fast delivery. I love my new jacket!"</p>
+        <div class="flex items-center">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer" class="w-10 h-10 rounded-full mr-3">
+          <span class="font-semibold">James O.</span>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <p class="italic mb-4">"Customer service was very helpful and the return process was easy."</p>
+        <div class="flex items-center">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer" class="w-10 h-10 rounded-full mr-3">
+          <span class="font-semibold">Sarah K.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-12 px-4">
+    <h3 class="text-3xl font-bold text-center mb-8">Contact Us</h3>
+    <form class="max-w-xl mx-auto space-y-4 bg-white p-6 rounded shadow">
+      <input type="text" placeholder="Your Name" class="w-full border px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
+      <input type="email" placeholder="Your Email" class="w-full border px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" required />
+      <textarea placeholder="Your Message" class="w-full border px-4 py-2 rounded h-32 focus:outline-none focus:ring-2 focus:ring-yellow-400" required></textarea>
+      <button type="submit" class="bg-black text-white py-2 px-4 rounded hover:bg-yellow-400 hover:text-black transition-colors duration-200">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-black via-gray-900 to-black text-white text-center py-8 mt-8 shadow-inner">
+    <p class="text-lg">&copy; 2025 Urban Travellar Outfit. All rights reserved.</p>
+  </footer>
+
+  <!-- Toast notification for cart -->
+<div id="toast" class="fixed bottom-20 right-8 bg-yellow-400 text-black px-6 py-3 rounded shadow-lg font-semibold opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+  Item added to cart!
+</div>
+
+  <!-- Checkout Modal -->
+<div id="checkout-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-lg p-8 max-w-md w-full">
+    <h3 class="text-2xl font-bold mb-4">Checkout</h3>
+    <p id="checkout-user" class="mb-2 text-gray-600"></p>
+    <ul id="checkout-list" class="mb-4 text-gray-700"></ul>
+    <button id="confirm-checkout" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500 font-semibold">Confirm Purchase</button>
+    <button id="close-checkout" class="ml-4 bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-400">Cancel</button>
+  </div>
+</div>
+
+  <!-- Login Modal -->
+<div id="login-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="bg-white rounded-lg shadow-lg p-8 max-w-xs w-full">
+    <h3 class="text-xl font-bold mb-4">Login</h3>
+    <input id="login-username" type="text" placeholder="Username" class="w-full border px-3 py-2 rounded mb-4" />
+    <input id="login-password" type="password" placeholder="Password" class="w-full border px-3 py-2 rounded mb-4" />
+    <div id="login-message" class="text-red-600 mb-2 text-sm"></div>
+    <button id="login-btn" class="bg-black text-white px-4 py-2 rounded hover:bg-yellow-400 hover:text-black w-full">Login</button>
+    <div class="flex justify-between mt-2 text-sm">
+      <a href="#" id="show-register" class="text-blue-600 hover:underline">Register</a>
+      <a href="#" id="show-reset" class="text-blue-600 hover:underline">Forgot Password?</a>
+    </div>
+  </div>
+</div>
+
+<!-- Registration Modal -->
+<div id="register-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-lg p-8 max-w-xs w-full">
+    <h3 class="text-xl font-bold mb-4">Register</h3>
+    <input id="register-username" type="text" placeholder="Username" class="w-full border px-3 py-2 rounded mb-4" />
+    <input id="register-password" type="password" placeholder="Password" class="w-full border px-3 py-2 rounded mb-4" />
+    <div id="register-message" class="text-red-600 mb-2 text-sm"></div>
+    <button id="register-btn" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500 w-full mb-2">Register</button>
+    <button id="register-cancel" class="bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-300 w-full">Cancel</button>
+  </div>
+</div>
+
+<!-- Password Reset Modal -->
+<div id="reset-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-lg p-8 max-w-xs w-full">
+    <h3 class="text-xl font-bold mb-4">Reset Password</h3>
+    <input id="reset-username" type="text" placeholder="Username" class="w-full border px-3 py-2 rounded mb-4" />
+    <input id="reset-password" type="password" placeholder="New Password" class="w-full border px-3 py-2 rounded mb-4" />
+    <div id="reset-message" class="text-red-600 mb-2 text-sm"></div>
+    <button id="reset-btn" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500 w-full mb-2">Reset Password</button>
+    <button id="reset-cancel" class="bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-300 w-full">Cancel</button>
+  </div>
+</div>
+
+  <script>
+    // Show a thank you alert when the contact form is submitted
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for contacting us! We will get back to you soon.');
+      this.reset();
+    });
+
+    // Cart functionality
+    let cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
+let cartCount = cartItems.length;
+const cartCounter = document.getElementById('cart-counter');
+const cartCountSpan = document.getElementById('cart-count');
+const toast = document.getElementById('toast');
+
+// Show cart count on page load
+if (cartCount > 0) {
+  cartCountSpan.textContent = cartCount;
+  cartCounter.classList.remove('hidden');
+}
+
+    document.querySelectorAll('button').forEach(btn => {
+      if (btn.textContent.includes('Buy Now')) {
+        btn.addEventListener('click', function() {
+          // Prevent double click
+          btn.disabled = true;
+          setTimeout(() => btn.disabled = false, 800);
+
+          // Get product name
+          const productName = btn.parentElement.querySelector('h4').textContent;
+          cartItems.push(productName);
+          localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+          cartCount++;
+          cartCountSpan.textContent = cartCount;
+          cartCounter.classList.remove('hidden');
+          // Show toast
+          toast.textContent = 'Item added to cart!';
+          toast.style.opacity = '1';
+          setTimeout(() => { toast.style.opacity = '0'; }, 1200);
+        });
+      }
+    });
+
+    // Mini cart modal
+    cartCounter.style.cursor = 'pointer';
+    cartCounter.title = 'View Cart';
+    cartCounter.addEventListener('click', () => {
+      if (cartItems.length === 0) {
+        alert('Your cart is empty.');
+      } else {
+        // Check login
+        const username = localStorage.getItem('username');
+        if (!username) {
+          alert('Please log in to proceed to checkout.');
+          loginModal.classList.remove('hidden');
+          return;
+        }
+        updateCheckoutList();
+        document.getElementById('checkout-user').textContent = `Checking out as: ${username}`;
+        checkoutModal.classList.remove('hidden');
+      }
+    });
+
+    // Double click to open checkout modal
+    cartCounter.addEventListener('dblclick', () => {
+  if (cartItems.length === 0) {
+    alert('Your cart is empty.');
+    return;
+  }
+  // Show checkout modal
+  document.getElementById('checkout-modal').classList.remove('hidden');
+  const list = document.getElementById('checkout-list');
+  list.innerHTML = cartItems.map(item => `<li>• ${item}</li>`).join('');
+});
+
+    // Checkout modal logic
+document.getElementById('close-checkout').onclick = () => {
+  document.getElementById('checkout-modal').classList.add('hidden');
+};
+document.getElementById('confirm-checkout').onclick = () => {
+  alert('Thank you for your purchase!');
+  cartItems = [];
+  cartCount = 0;
+  cartCountSpan.textContent = cartCount;
+  cartCounter.classList.add('hidden');
+  localStorage.removeItem('cartItems');
+  document.getElementById('checkout-modal').classList.add('hidden');
+};
+
+    // --- LOGIN LOGIC ---
+const loginModal = document.getElementById('login-modal');
+const loginBtn = document.getElementById('login-btn');
+const welcomeUser = document.getElementById('welcome-user');
+const userNameSpan = document.getElementById('user-name');
+const logoutBtn = document.getElementById('logout-btn');
+
+// Show login modal if not logged in
+function showWelcome() {
+  const username = localStorage.getItem('username');
+  if (username) {
+    welcomeUser.classList.remove('hidden');
+    userNameSpan.textContent = username;
+    loginModal.classList.add('hidden');
+  } else {
+    welcomeUser.classList.add('hidden');
+    loginModal.classList.remove('hidden');
+  }
+}
+showWelcome();
+
+loginBtn.onclick = () => {
+  const username = document.getElementById('login-username').value.trim();
+  const password = document.getElementById('login-password').value;
+  const message = document.getElementById('login-message');
+
+  const user = demoUsers.find(u => u.username === username && u.password === password);
+
+  if (user) {
+    localStorage.setItem('username', username);
+    showWelcome();
+    loginModal.classList.add('hidden');
+    message.textContent = '';
+    alert('Welcome, ' + username + '!');
+  } else {
+    message.textContent = 'Invalid username or password!';
+  }
+};
+
+logoutBtn.onclick = () => {
+  localStorage.removeItem('username');
+  document.getElementById('login-password').value = '';
+  showWelcome();
+};
+
+    // --- Registration Logic ---
+const registerModal = document.getElementById('register-modal');
+const registerBtn = document.getElementById('register-btn');
+const registerCancel = document.getElementById('register-cancel');
+const registerMessage = document.getElementById('register-message');
+const showRegister = document.getElementById('show-register');
+
+showRegister.onclick = (e) => {
+  e.preventDefault();
+  loginModal.classList.add('hidden');
+  registerModal.classList.remove('hidden');
+  registerMessage.textContent = '';
+};
+
+registerCancel.onclick = () => {
+  registerModal.classList.add('hidden');
+  loginModal.classList.remove('hidden');
+};
+
+registerBtn.onclick = () => {
+  const username = document.getElementById('register-username').value.trim();
+  const password = document.getElementById('register-password').value;
+  if (!username || !password) {
+    registerMessage.textContent = 'Please enter username and password.';
+    return;
+  }
+  // Check if user exists
+  let users = JSON.parse(localStorage.getItem('users') || '[]');
+  if (users.find(u => u.username === username)) {
+    registerMessage.textContent = 'Username already exists!';
+    return;
+  }
+  users.push({ username, password });
+  localStorage.setItem('users', JSON.stringify(users));
+  registerMessage.textContent = 'Registration successful! You can now log in.';
+  setTimeout(() => {
+    registerModal.classList.add('hidden');
+    loginModal.classList.remove('hidden');
+  }, 1000);
+};
+
+    // --- Password Reset Logic ---
+const resetModal = document.getElementById('reset-modal');
+const resetBtn = document.getElementById('reset-btn');
+const resetCancel = document.getElementById('reset-cancel');
+const resetMessage = document.getElementById('reset-message');
+const showReset = document.getElementById('show-reset');
+
+showReset.onclick = (e) => {
+  e.preventDefault();
+  loginModal.classList.add('hidden');
+  resetModal.classList.remove('hidden');
+  resetMessage.textContent = '';
+};
+
+resetCancel.onclick = () => {
+  resetModal.classList.add('hidden');
+  loginModal.classList.remove('hidden');
+};
+
+resetBtn.onclick = () => {
+  const username = document.getElementById('reset-username').value.trim();
+  const password = document.getElementById('reset-password').value;
+  if (!username || !password) {
+    resetMessage.textContent = 'Please enter username and new password.';
+    return;
+  }
+  let users = JSON.parse(localStorage.getItem('users') || '[]');
+  const user = users.find(u => u.username === username);
+  if (!user) {
+    resetMessage.textContent = 'Username not found!';
+    return;
+  }
+  user.password = password;
+  localStorage.setItem('users', JSON.stringify(users));
+  resetMessage.textContent = 'Password reset successful!';
+  setTimeout(() => {
+    resetModal.classList.add('hidden');
+    loginModal.classList.remove('hidden');
+  }, 1000);
+};
+
+    // Update Login Logic to Use Registered Users
+loginBtn.onclick = () => {
+  const username = document.getElementById('login-username').value.trim();
+  const password = document.getElementById('login-password').value;
+  const message = document.getElementById('login-message');
+  let users = JSON.parse(localStorage.getItem('users') || '[]');
+  const user = users.find(u => u.username === username && u.password === password);
+  if (user) {
+    localStorage.setItem('username', username);
+    showWelcome();
+    loginModal.classList.add('hidden');
+    message.textContent = '';
+    alert('Welcome, ' + username + '!');
+  } else {
+    message.textContent = 'Invalid username or password!';
+  }
+};
+
+    // Scroll-to-top button
+    const scrollBtn = document.createElement('button');
+    scrollBtn.innerHTML = '↑';
+    scrollBtn.setAttribute('aria-label', 'Scroll to top');
+    scrollBtn.className = 'fixed bottom-8 right-8 bg-black text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg opacity-0 transition-opacity duration-300 z-50 hover:bg-yellow-400 hover:text-black';
+    scrollBtn.style.display = 'none';
+    document.body.appendChild(scrollBtn);
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollBtn.style.display = 'flex';
+        scrollBtn.style.opacity = '1';
+      } else {
+        scrollBtn.style.opacity = '0';
+        setTimeout(() => { scrollBtn.style.display = 'none'; }, 300);
+      }
+    });
+
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Highlight nav links on scroll
+    const sections = document.querySelectorAll('section[id], #home');
+    const navLinks = document.querySelectorAll('nav a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('text-yellow-400');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('text-yellow-400');
+        }
+      });
+    });
+
+    // Add hover effect to product cards
+    document.querySelectorAll('.border.rounded.shadow').forEach(card => {
+      card.classList.add('transition', 'transform', 'hover:scale-105', 'hover:shadow-2xl');
+    });
+
+    // Checkout functionality
+const checkoutModal = document.getElementById('checkout-modal');
+const checkoutList = document.getElementById('checkout-list');
+const confirmCheckoutBtn = document.getElementById('confirm-checkout');
+const closeCheckoutBtn = document.getElementById('close-checkout');
+
+function updateCheckoutList() {
+  checkoutList.innerHTML = '';
+  cartItems.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    checkoutList.appendChild(li);
+  });
+}
+
+cartCounter.addEventListener('click', () => {
+  if (cartItems.length === 0) {
+    alert('Your cart is empty.');
+  } else {
+    // Check login
+    const username = localStorage.getItem('username');
+    if (!username) {
+      alert('Please log in to proceed to checkout.');
+      loginModal.classList.remove('hidden');
+      return;
+    }
+    updateCheckoutList();
+    document.getElementById('checkout-user').textContent = `Checking out as: ${username}`;
+    checkoutModal.classList.remove('hidden');
+  }
+});
+
+closeCheckoutBtn.addEventListener('click', () => {
+  checkoutModal.classList.add('hidden');
+});
+
+confirmCheckoutBtn.addEventListener('click', () => {
+  // Here you would typically handle the payment processing and order confirmation
+  alert('Thank you for your purchase!');
+  localStorage.removeItem('cartItems');
+  cartCount = 0;
+  cartCountSpan.textContent = cartCount;
+  cartCounter.classList.add('hidden');
+  checkoutModal.classList.add('hidden');
+});
+
+// Demo users (in a real app, use a backend!)
+const demoUsers = [
+  { username: "admin", password: "admin123" },
+  { username: "user", password: "user123" }
+];
+  </script>
+</body>
+</html>
